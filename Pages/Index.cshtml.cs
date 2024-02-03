@@ -1,23 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using ProcessoSeletivo.Model;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ProcessoSeletivo.Pages
+namespace WebApplication9.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly Data.ProcessoSeletivoContext _context;
+        private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(Data.ProcessoSeletivoContext context)
+        public IndexModel(ILogger<IndexModel> logger)
         {
-            _context = context;
+            _logger = logger;
         }
 
-        public IList<Pergunta> Pergunta { get;set; } = default!;
-
-        public async Task OnGetAsync()
+        public void OnGet()
         {
-            Pergunta = await _context.Pergunta.ToListAsync();
+
         }
     }
 }

@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ProcessoSeletivo.Pages
+namespace WebApplication9.Pages
 {
     public class PrivacyModel : PageModel
     {

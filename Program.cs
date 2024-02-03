@@ -1,14 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ProcessoSeletivo.Data;
-namespace ProcessoSeletivo
+namespace WebApplication9
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<ProcessoSeletivoContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ProcessoSeletivoContext") ?? throw new InvalidOperationException("Connection string 'ProcessoSeletivoContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddRazorPages();
